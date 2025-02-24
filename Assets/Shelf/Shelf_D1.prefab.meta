@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 65fae4c12edf3e04785d6ad3242c2777
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 646
+  packageName: Shelf
+  packageVersion: 3.0
+  assetPath: Assets/Shelf/Shelf_D1.prefab
+  uploadId: 25862
