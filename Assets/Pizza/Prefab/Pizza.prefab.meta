@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 76585dba3314f224f9db50d0dde3c01a
+timeCreated: 1514998208
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 108425
+  packageName: PBR Pizza
+  packageVersion: 1.0
+  assetPath: Assets/Pizza/Prefab/Pizza.prefab
+  uploadId: 226146

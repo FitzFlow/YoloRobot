@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e254d5f042c6dec448690ac5f3287b79
+timeCreated: 1514998272
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 108425
+  packageName: PBR Pizza
+  packageVersion: 1.0
+  assetPath: Assets/Pizza/Pizza.unity
+  uploadId: 226146
