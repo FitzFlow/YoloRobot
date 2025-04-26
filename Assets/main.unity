@@ -5786,7 +5786,7 @@ PrefabInstance:
     - target: {fileID: -7301789338863235619, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ada2167db96316409cb03621f9bab6b, type: 2}
     - target: {fileID: -3534589891437019727, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_Name
       value: Hook
@@ -5794,7 +5794,7 @@ PrefabInstance:
     - target: {fileID: -2246936825178421989, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4a3c4e9ae9b122e449659fdb803fb1dc, type: 2}
+      objectReference: {fileID: 2100000, guid: e000cf84e00aa6f4aac76474f809a621, type: 2}
     - target: {fileID: 919132149155446097, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_Name
       value: CartoonGrapple
