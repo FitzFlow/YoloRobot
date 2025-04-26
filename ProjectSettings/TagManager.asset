@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Anchor
   - RightHand
+  - Interactable
+  - RollingPin
+  - Sauce
+  - Cheese
   layers:
   - Default
   - TransparentFX
