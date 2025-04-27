@@ -5776,7 +5776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.896
+      value: 0.847
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5784,11 +5784,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5800,7 +5800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5814,10 +5814,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7301789338863235619, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ada2167db96316409cb03621f9bab6b, type: 2}
     - target: {fileID: -3534589891437019727, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_Name
       value: Hook
       objectReference: {fileID: 0}
+    - target: {fileID: -2246936825178421989, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e767d86cbf3099a478162f1692b1edf3, type: 2}
     - target: {fileID: 919132149155446097, guid: e4f7d697515c6d64081c4af71a01de89, type: 3}
       propertyPath: m_Name
       value: CartoonGrapple
@@ -14008,6 +14016,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c69bd48a04f77e429a289a28442e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightTriggerController: {fileID: 0}
+  hook: {fileID: 0}
+  launchSpeed: 20
+  maxDistance: 50
+  cooldownDuration: 2
 --- !u!65 &558848892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21688,6 +21701,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5647268704009584530, guid: f0d08e254301be8458ec870d434f4965, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 676aefebf85c35e4dbd7f9d60085b102, type: 2}
+    - target: {fileID: 6304046040739327002, guid: f0d08e254301be8458ec870d434f4965, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.022
+      objectReference: {fileID: 0}
     - target: {fileID: 6689862641366940425, guid: f0d08e254301be8458ec870d434f4965, type: 3}
       propertyPath: m_Name
       value: FFK_Kiosk_01_01
@@ -26234,6 +26255,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2001912157}
     m_Modifications:
+    - target: {fileID: 3153829834469310851, guid: 22083d3c7778346438a911c3b30e2116, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 676aefebf85c35e4dbd7f9d60085b102, type: 2}
+    - target: {fileID: 3668180831907664395, guid: 22083d3c7778346438a911c3b30e2116, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668180831907664395, guid: 22083d3c7778346438a911c3b30e2116, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668180831907664395, guid: 22083d3c7778346438a911c3b30e2116, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4128866075157480728, guid: 22083d3c7778346438a911c3b30e2116, type: 3}
       propertyPath: m_Name
       value: FFK_Kiosk_ServicePlate_01_01
@@ -49630,6 +49667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a93e53f11429b4789befe2df890324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireHarpoonScript: {fileID: 0}
 --- !u!1 &2008598155
 GameObject:
   m_ObjectHideFlags: 0
