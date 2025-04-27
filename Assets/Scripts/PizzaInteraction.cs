@@ -2,34 +2,22 @@ using UnityEngine;
 
 public class PizzaInteraction : MonoBehaviour
 {
-    public PizzaMaker pizzaMaker; // Référence au script PizzaMaker
-    public enum InteractionType { Roll, Sauce, Cheese }
-    public InteractionType interactionType;
+    private PizzaController pizzaController;
+
+    private void Awake()
+    {
+        pizzaController = GetComponentInParent<PizzaController>(); 
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        switch (interactionType)
+        Debug.Log($"Trigger touché par : {other.gameObject.name} avec tag {other.tag}"); // teste
+
+        if (pizzaController == null) return;
+
+        if (other.CompareTag("RollingPin") || other.CompareTag("Sauce") || other.CompareTag("Cheese"))
         {
-            case InteractionType.Roll:
-                if (other.CompareTag("RollingPin"))
-                {
-                    pizzaMaker.FlattenDough();
-                }
-                break;
-
-            case InteractionType.Sauce:
-                if (other.CompareTag("Sauce"))
-                {
-                    pizzaMaker.AddSauce();
-                }
-                break;
-
-            case InteractionType.Cheese:
-                if (other.CompareTag("Cheese"))
-                {
-                    pizzaMaker.AddCheese();
-                }
-                break;
+            pizzaController.HandleInteraction(other.tag);
         }
     }
 }
