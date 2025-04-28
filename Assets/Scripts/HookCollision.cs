@@ -6,12 +6,15 @@ public class HookCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Harpon a touché : " + collision.gameObject.name);
+        Debug.Log("Harpon a touchÃ© : " + collision.gameObject.name);
 
-        // Appeler la méthode ResetHook du script FireHarpoon
-        if (fireHarpoonScript != null)
+        if (collision.gameObject.CompareTag("Ingredient"))
         {
-            fireHarpoonScript.ResetHook();
+            fireHarpoonScript?.AttachIngredient(collision.gameObject);
+        }
+        else
+        {
+            fireHarpoonScript?.ResetHook();
         }
     }
 }

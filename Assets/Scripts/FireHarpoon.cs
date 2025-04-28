@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireHarpoon : MonoBehaviour
 {
+    public Transform leftHandTransform;    // ←– add this so you can drag your left‐hand controller here
     public InputActionReference RightTriggerController;
     public GameObject hook;
     public float launchSpeed = 20f;
@@ -141,7 +142,33 @@ public class FireHarpoon : MonoBehaviour
             trailRenderer.enabled = false;
             trailRenderer.Clear();
         }
+
+        // Detach any Ingredient still stuck on the hook
+        foreach (Transform child in hook.transform)
+        {
+            if (child.CompareTag("Ingredient"))
+            {
+                child.SetParent(null);
+                Rigidbody rb = child.GetComponent<Rigidbody>();
+                if (rb != null) rb.isKinematic = false;
+            }
+        }
     }
+
+    // ←––– Add this new method
+    public void AttachIngredient(GameObject ingredient)
+    {
+        Rigidbody ingRb = ingredient.GetComponent<Rigidbody>();
+        if (ingRb != null)
+            ingRb.isKinematic = true;
+
+        // choose parent: left hand if assigned, otherwise hook
+        Transform parent = leftHandTransform != null ? leftHandTransform : hook.transform;
+        ingredient.transform.SetParent(parent);
+        ingredient.transform.localPosition = Vector3.zero;
+        ingredient.transform.localRotation = Quaternion.identity;
+    }
+
 
     void StartCooldown()
     {
