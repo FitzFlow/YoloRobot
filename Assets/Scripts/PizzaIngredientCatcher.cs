@@ -8,6 +8,7 @@ public class PizzaIngredientCatcher : MonoBehaviour
 {
     [SerializeField] private float forcedYCorrection = -0.04f;
     private List<string> attachedIngredientNames = new List<string>();
+    // public bool isGrilled { get; set; } = false;  // Add this line
     private Dictionary<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable, (UnityAction<SelectExitEventArgs>, UnityAction<SelectEnterEventArgs>)> interactableListeners =
         new Dictionary<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable, (UnityAction<SelectExitEventArgs>, UnityAction<SelectEnterEventArgs>)>();
 
