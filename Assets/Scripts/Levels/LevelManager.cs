@@ -1,28 +1,71 @@
 using UnityEngine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     public GameObject level1Detector;
     public GameObject level2Detector;
-
     public Timer timerScript;
-    public Transform playerStartPosition; // Nouvelle référence au point de respawn
-
+    public Transform playerStartPosition;
+    public TextMeshProUGUI levelCompleteText;
 
     private int currentLevel = 1;
-
-    public int GetCurrentLevel()
-    {
-        return currentLevel;
-    }
+    private AudioSource audioSource;
+    public AudioClip levelCompleteSound;
 
     private void Start()
     {
         ActivateLevel(1);
 
+        audioSource = GetComponent<AudioSource>();
+
         if (timerScript != null)
         {
             timerScript.OnTimerEnd += HandleTimerEnded;
+        }
+
+        if (levelCompleteText != null)
+        {
+            levelCompleteText.gameObject.SetActive(false); // 🔥 On cache le texte au départ
+        }
+    }
+
+    public void ActivateLevel(int level)
+    {
+        currentLevel = level;
+
+        if (level1Detector != null)
+            level1Detector.SetActive(currentLevel == 1);
+
+        if (level2Detector != null)
+            level2Detector.SetActive(currentLevel == 2);
+
+        Debug.Log($"Niveau actuel '{currentLevel}'");
+    }
+
+    public void NextLevel()
+    {
+        PlayLevelCompleteSound();
+
+        if (levelCompleteText != null)
+        {
+            levelCompleteText.gameObject.SetActive(true);
+            levelCompleteText.text = $"Niveau {currentLevel} terminé ! 🎉";
+        }
+
+        ActivateLevel(currentLevel + 1);
+    }
+
+    private void PlayLevelCompleteSound()
+    {
+        if (audioSource != null && levelCompleteSound != null)
+        {
+            audioSource.PlayOneShot(levelCompleteSound);
+            Debug.Log("Playing Level Complete Sound");
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource ou LevelCompleteSound est manquant !");
         }
     }
 
@@ -31,9 +74,12 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Temps écoulé, réinitialisation du niveau...");
 
         // 🔥 Reset Timer
-        timerScript.ResetTimer();
+        if (timerScript != null)
+        {
+            timerScript.ResetTimer();
+        }
 
-        // 🔥 Reset Position Joueur
+        // 🔥 Reset Joueur
         ResetPlayerPosition();
 
         // 🔥 Reset Niveau
@@ -54,31 +100,8 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void ActivateLevel(int level)
+    public int GetCurrentLevel()
     {
-        currentLevel = level;
-        Debug.Log($"Niveau actuel'{currentLevel}'");
-
-        // Activer/désactiver les détecteurs en fonction du niveau
-        if (level == 1)
-        {
-            level1Detector.SetActive(true);
-            level2Detector.SetActive(false);
-        }
-        else if (level == 2)
-        {
-            level1Detector.SetActive(false);
-            level2Detector.SetActive(true);
-        }
-        else
-        {
-            Debug.LogWarning("Niveau non reconnu : " + level);
-        }
-    }
-
-    public void NextLevel()
-    {
-        ActivateLevel(currentLevel + 1);
-        Debug.Log($"Niveau actuel'{currentLevel}'");
+        return currentLevel;
     }
 }
