@@ -15,16 +15,16 @@
 
 ```
 Assets/
+├── Accessoires/            -> Contient des accessoires pour les bornes etc 
 ├── DLAssets/               -> Assets téléchargés du Unity Store (props, modèles, etc.)
 ├── Food Pack-Demo/         -> Pack d'ingrédients et objets liés à la nourriture
-├── main/                   
+├── main/                   -> Contient des fichiers de base d'Unity VR
 ├── Pizza/                  -> Éléments liés au gameplay Pizza (prefabs, textures)
-├── Resources/              
+├── Resources/              -> même chose de main/ (contient des éléments d'Unity VR)
 ├── Samples/                -> Fichier de XR Toolkit (XR Hands, Interaction toolkit, ...)
 ├── Scripts/                -> Scripts C# (grappin, gestion pizza, timer, scoring)
 ├── Settings/               -> Configurations du projet Unity
-├── Survival Props/         
-├── TextMesh Pro/           -> Gestion du texte
+├── TextMesh Pro/           -> Fichier pour le texte
 ├── VRTemplateAssets/       -> Template VR de base utilisé
 ├── XR/                     -> Configurations XR
 ├── XRI/                    -> XR Interaction Toolkit (inputs/actions)
@@ -41,9 +41,7 @@ Packages/                   -> Dépendances et packages Unity
 
 ### Comment lancer:
 
-ajouter procedure
-
----
+Lancer le logiciel Unity avec le projet installé avec la bonne version. Ensuite se connecter via un cable link ou wifi Link avec Oculus Quest et ensuite appuyer sur play pour lancer le jeu.
 
 ## Crédits
 
