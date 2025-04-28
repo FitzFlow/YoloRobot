@@ -21,6 +21,7 @@ public class Level2 : MonoBehaviour
         {
             // Now that we've identified the correct pizza by name, try to get its ingredient catcher
             PizzaIngredientCatcher pizzaCatcher = collision.gameObject.GetComponent<PizzaIngredientCatcher>();
+            Debug.Log("Collision détéctée 2");
 
             if (pizzaCatcher != null)
             {
@@ -52,5 +53,10 @@ public class Level2 : MonoBehaviour
     public void ResetLevel()
     {
         isLevel2Complete = false;
+    }
+
+    public bool IsLevel2Complete()
+    {
+        return isLevel2Complete;
     }
 }

@@ -1,25 +1,32 @@
 using UnityEngine;
-  // Assure-toi d'utiliser ce namespace
+using System.Collections.Generic;
 
 public class Level1 : MonoBehaviour
 {
-    // Nom de l'élément à vérifier
-    public string targetName = "DoughWithSauceCheese"; // Nom de la pizza
-    private bool isLevel1Complete = false; // Si le niveau est terminé
+    public List<string> requiredIngredients = new List<string>(); // Pour MissingIngredientsDisplay
+    private string targetName = "DoughWithSauceCheese"; 
+    private bool isLevel1Complete = false;
 
     void OnCollisionEnter(Collision collision)
     {
-        // Vérifier si l'objet entrant en collision avec la boîte est le bon
+        Debug.Log("Collision détectée 1");
+
         if (!isLevel1Complete && (collision.gameObject.name == targetName || collision.gameObject.name == targetName + "(Clone)"))
         {
             isLevel1Complete = true;
-            Debug.Log("Niveau 1 terminé !"); // Message de débogage
-            Debug.Log("Has tag: " + collision.gameObject.tag); // Message de débogage
+            Debug.Log("Niveau 1 terminé !");
+
+            // 🔥 IMPORTANT : Demander au LevelManager de passer au niveau suivant !
+            FindObjectOfType<LevelManager>().NextLevel();
         }
-        
         else
         {
             Debug.Log($"Collision avec un objet non valide : {collision.gameObject.name}");
         }
+    }
+
+    public bool IsLevel1Complete()
+    {
+        return isLevel1Complete;
     }
 }
