@@ -11,6 +11,7 @@ TagManager:
   - Sauce
   - Cheese
   - Ingredient
+  - DoughWithSauceCheese
   layers:
   - Default
   - TransparentFX
