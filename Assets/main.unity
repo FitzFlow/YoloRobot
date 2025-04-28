@@ -14207,6 +14207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c69bd48a04f77e429a289a28442e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHandTransform: {fileID: 0}
   RightTriggerController: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   hook: {fileID: 2007939368}
   launchSpeed: 20
@@ -32515,15 +32516,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9f824b52a9c55174e9f9748a367f6964, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9f824b52a9c55174e9f9748a367f6964, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9f824b52a9c55174e9f9748a367f6964, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9f824b52a9c55174e9f9748a367f6964, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33701,6 +33702,10 @@ PrefabInstance:
     - target: {fileID: 9153867216066621692, guid: 4f2bbe3a2f1a9bd4581b2d9d53ed42ca, type: 3}
       propertyPath: m_Name
       value: FFK_Register (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153867216066621692, guid: 4f2bbe3a2f1a9bd4581b2d9d53ed42ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -35256,15 +35261,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 69656d7657edf6c469188174fb5db922, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69656d7657edf6c469188174fb5db922, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69656d7657edf6c469188174fb5db922, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69656d7657edf6c469188174fb5db922, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44823,6 +44828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FFK_ReceiptPrinter_01_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813714421805739260, guid: 229d90e951634f543b0a9e106dc0ee37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7251344137247912993, guid: 229d90e951634f543b0a9e106dc0ee37, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -45788,15 +45797,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 391c5039e74345848aa7b4a525450cbd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 391c5039e74345848aa7b4a525450cbd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 391c5039e74345848aa7b4a525450cbd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 391c5039e74345848aa7b4a525450cbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47076,15 +47085,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47092,7 +47101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.136
+      value: -0.1188
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e01b662f32ebea45949c6f8ba12563a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50819,7 +50828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a93e53f11429b4789befe2df890324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireHarpoonScript: {fileID: 0}
+  fireHarpoonScript: {fileID: 558848891}
 --- !u!1 &2008598155
 GameObject:
   m_ObjectHideFlags: 0
