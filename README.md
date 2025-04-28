@@ -45,8 +45,10 @@ Lancer le logiciel Unity avec le projet installé avec la bonne version. Ensuite
 
 ### Niveaux actuels : 
 
+<div style="flex">
 <img src="https://github.com/FitzFlow/YoloRobot/blob/main/Assets/Levels%20Github/recette%201.png?raw=true" width="300"/>
 <img src="https://github.com/FitzFlow/YoloRobot/blob/main/Assets/Levels%20Github/recette%202.png?raw=true" width="300"/>
+</div>
 
 
 ## Crédits
