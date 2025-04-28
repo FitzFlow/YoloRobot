@@ -43,6 +43,12 @@ Packages/                   -> Dépendances et packages Unity
 
 Lancer le logiciel Unity avec le projet installé avec la bonne version. Ensuite se connecter via un cable link ou wifi Link avec Oculus Quest et ensuite appuyer sur play pour lancer le jeu.
 
+### Niveaux actuels : 
+
+<img src="https://github.com/FitzFlow/YoloRobot/blob/main/Assets/Levels%20Github/recette%201.png?raw=true" width="300"/>
+<img src="https://github.com/FitzFlow/YoloRobot/blob/main/Assets/Levels%20Github/recette%202.png?raw=true" width="300"/>
+
+
 ## Crédits
 
 - Joshua MARTINOLI
