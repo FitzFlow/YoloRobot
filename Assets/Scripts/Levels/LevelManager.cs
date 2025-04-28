@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip levelCompleteSound;
 
+    private float levelCompleteTextTimer = -1f; // 🔥 Timer pour cacher le texte
+    private const float levelCompleteDisplayDuration = 5f; // Durée d'affichage en secondes
+
+
     private void Start()
     {
         ActivateLevel(1);
@@ -27,6 +31,22 @@ public class LevelManager : MonoBehaviour
         if (levelCompleteText != null)
         {
             levelCompleteText.gameObject.SetActive(false); // 🔥 On cache le texte au départ
+        }
+    }
+
+    private void Update()
+    {
+        if (levelCompleteTextTimer > 0f)
+        {
+            levelCompleteTextTimer -= Time.deltaTime;
+
+            if (levelCompleteTextTimer <= 0f)
+            {
+                if (levelCompleteText != null)
+                {
+                    levelCompleteText.gameObject.SetActive(false);
+                }
+            }
         }
     }
 
@@ -50,11 +70,14 @@ public class LevelManager : MonoBehaviour
         if (levelCompleteText != null)
         {
             levelCompleteText.gameObject.SetActive(true);
-            levelCompleteText.text = $"Niveau {currentLevel} terminé ! 🎉";
+
+            // 🔥 Démarrer le compte à rebours pour cacher le texte
+            levelCompleteTextTimer = levelCompleteDisplayDuration;
         }
 
         ActivateLevel(currentLevel + 1);
     }
+
 
     private void PlayLevelCompleteSound()
     {
