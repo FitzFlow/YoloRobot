@@ -41,8 +41,6 @@ Packages/                   -> Dépendances et packages Unity
 
 ### Comment lancer:
 
-ajouter procedure
-
 Lancer le logiciel Unity avec le projet installé avec la bonne version. Ensuite se connecter via un cable link ou wifi Link avec Oculus Quest et ensuite appuyer sur play pour lancer le jeu.
 
 ## Crédits
